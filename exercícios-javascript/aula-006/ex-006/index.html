@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logotipo-javascript.png" type="image/png">
+    <title>Eventos DOM</title>
+    <style>
+        div#botão{
+            background-color: yellow;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            color: black;
+       }
+    </style>
+</head>
+<body>
+    <div id="botão"><strong>interaja-se...</strong></div>
+      <script>
+        
+        var int = document.getElementById('botão')
+        int.addEventListener('click', clicar)
+        int.addEventListener('mouseenter', entrar)
+        int.addEventListener('mouseout', sair)
+
+        function clicar(){
+            int.innerHTML = '<strong>botão clicado!</strong>'
+            int.style.background = "red"
+        }    
+        function entrar(){
+            int.innerHTML = "<strong>entrou!</strong>"
+            int.style.background = "pink"
+        }
+        function sair(){
+           int.innerHTML = " <strong>saiu!</strong>"
+            int.style.background = "aqua"
+        }
+        
+    </script>
+</body>
+</html>

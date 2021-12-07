@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logotipo-javascript.png" type="image/png">
+    <title>interação-js</title>
+    <style>
+        body{
+            background-color:rgb(35, 25, 177);
+            font: 12pt arial;
+            color: white;
+            }
+        button{
+            font-size: 12pt;padding: 30px;
+            color:blue;
+            }
+            h1{
+                color: white;
+            }
+    </style>
+</head>
+<body>
+    <h1>clique no botão para conversar comigo!</h1>
+    <button onclick="clicou()">click aqui para começar!</button>
+    <section id="resposta">
+        <strong>
+            <h2>
+                <p>resposta... </p>
+            </h2>
+        </strong>
+    </section>
+    <script>
+        function clicou() {
+            let nome=prompt(`qual é o seu nome?: `)
+            alert(`Seja bem-vindo no nosso site ${nome}`)
+            let resp = document.getElementById('resposta')
+            resp.innerHTML = `<h2>
+                <p>
+                    Foi um prazer conhecer-te <strong>${nome.toUpperCase()}</strong>, e obrigado por visitar o nosso site &#x1F596;
+                </p>
+            </h2>`
+        
+        }
+    </script>  
+</body>
+</html>

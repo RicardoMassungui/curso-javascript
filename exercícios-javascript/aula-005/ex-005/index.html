@@ -1,0 +1,89 @@
+    <!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logotipo-javascript.png" type="image/png">
+    <title>DOM P-01</title>
+    <style>
+        body{
+            background-color:black;
+            color: white;
+            font: normal 10pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conhecendo o DOM</h1>
+    <hr>
+    <p>Estou aprendendo a Usar o <strong>DOM</strong> em Javascript</p>
+    <p>Aqui aparece o resultado: </p>
+    <div id="back">Clique em mim</div>
+    <script>
+        
+        // Adicionando elemento oculto...
+        var novo = document.createElement('p')
+        novo.textContent = "Hello, World!"
+        document.body.appendChild(novo)
+        novo.style.background = 'yellow'
+        novo.style.color = "black"
+        novo.innerText = "hackeado"
+        
+        // Alterando o corpo/body...
+        /*var corpo = window.document.body
+        corpo.style.background = 'black'
+        corpo.innerHTML = '<abbr title="informática/programação web"><h2>hacker-0/1<h2></abbr>'
+        corpo.style.color = 'white'
+        document.write('<h1>eu sou o vosso pesadelo</h1>')*/
+        
+        // Metódo-ID
+        /*var ide = document.getElementById("m-id") 
+        document.write('na realidade a tag div diz: ' + ide.innerText)
+        ide.style.background = 'green'
+        ide.innerText = "qualquer coisa: "
+        ide2.style.color = 'red'
+        alert(ide.innerText)
+        confirm(ide.innerText)*/   
+        
+        // Metódo-Name
+        /*var nome = document.getElementsByName('n')[]
+        document.write('na realidade p diz: ' + nome.innerText)
+        nome.style.background = 'brown'
+        nome.style.color = 'black'
+        nome.innerText = 'hackeando'*/
+                             
+        // Método-Class
+        /*var classe = document.getElementsByClassName('core')[]
+        document.write('a tag diz: ' + classe.innerText)
+        classe.innerText = '<h1>agora a tag diz: olá, mundo...</h1>'
+        classe.style.color = 'pink'
+        classe.style.background = 'black'
+        alert(classe.innerText)*/
+    
+        // Método-TagName
+        /*var pg = document.getElementsByTagName('p')[]
+        document.write('a tag diz: ' + pg.innerText)
+        pg.innerText = '<h1>agora a tag diz: olá, mundo...</h1>'
+        pg.style.color = 'brown'
+        pg.style.background = 'white'
+        alert(pg.innerText)*/
+    
+        // Método-seletor-ID
+       /* var sd = document.querySelector('div#front')
+        sd.style.color = 'black'
+        sd.style.background = 'aqua'
+        sd.innerText = "js é interativadade"
+        document.write('tag hackeada diz : ' + sd.innerText)*/
+
+        // Método-seletor-class
+        /*var sc = document.querySelector('div.back')
+        document.write('<strong>a tag natural diz</strong>: ' + sc.innerText)
+        sc.innerText = "a tag hackeada diz: hackeando DOM" 
+        sc.style.color = "orange"
+        sc.style.background = "blue"*/
+    
+        // Método-ID-02
+        /*document.getElementById('back').textContent = "Olá, mundo!"*/
+    </script>
+</body>
+</html>
